@@ -17,58 +17,22 @@
         <form id="calculadora-form">
             <label for="peso">Peso do alimento (g):</label>
             <input type="number" id="peso" name="peso" required>
-            <br />
 
             <label for="agua">Quantidade de água (mL):</label>
             <input type="number" id="agua" name="agua" value="500" required>
-            <br />
 
             <button type="submit" id="calcular-btn" onclick="calcular()">Calcular</button>
             <button type="reset" id="limpar-btn">Limpar</button>
         </form>
         <div class="resultados" id="resultados-div" style="visibility: hidden;">
-            <p id="resultados">Teste</p>
+            <p id="resultado-tempo">Tempo de salmoura</p>
+            <p id="resultado-sal">Quantidade de sal</p>
         </div>
     </main>
     <footer>
         <p>&copy; Bruno Dantas</p>
     </footer>
-    <script>
-        function formatarTempo(segundos) {
-            let horas = Math.floor(segundos / 3600);
-            let minutos = Math.floor((segundos % 3600) / 60);
-            let segundosRestantes = segundos % 60;
-
-            let partes = [];
-            if (horas > 0) partes.push(`${horas} horas`);
-            if (minutos > 0) partes.push(`${minutos} minutos`);
-            if (segundosRestantes > 0) partes.push(`${segundosRestantes} segundos`);
-
-            return partes.join(", ").replace(/,([^,]*)$/, " e$1");
-        }
-
-        function calcular() {
-            event.preventDefault(); // Previne o envio do formulário
-
-            // Remove o foco dos campos de entrada para fechar o teclado
-            document.getElementById("peso").blur();
-            document.getElementById("agua").blur();
-
-            let peso = parseFloat(document.getElementById("peso").value);
-            let agua = parseFloat(document.getElementById("agua").value);
-        
-            if (peso <= 0 || agua <= 0 || isNaN(peso) || isNaN(agua)) {
-                alert("Por favor, insira valores válidos.");
-                return;
-            }
-        
-            let sal = agua * 0.1; // 10% de sal na água
-            let tempo = ((peso * 7) / 100) * 60; // 7 min para cada 100g. Tempo em segundos
-        
-            document.getElementById("resultados").innerHTML = `Para ${peso}g de alimento, você precisará de ${sal}g de sal. O tempo de salmoura é de ${formatarTempo(tempo)}.`;
-            document.getElementById("resultados-div").style.visibility = "visible";
-        }
-    </script>
+    <script src="script.js"></script>
 </body>
 
 </html>
