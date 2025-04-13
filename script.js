@@ -32,5 +32,5 @@ function calcular() {
     document.getElementById("resultado-tempo").innerText = `Tempo de salmoura: ${formatarTempo(tempo)}`;
     document.getElementById("resultado-sal").innerText = `Quantidade de sal: ${sal.toFixed(2)} g`;
 
-    document.getElementById("resultados-div").style.visibility = "visible";
+    document.getElementById("resultados-div").style.display = "block";
 }
