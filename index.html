@@ -50,6 +50,10 @@
         function calcular() {
             event.preventDefault(); // Previne o envio do formulário
 
+            // Remove o foco dos campos de entrada para fechar o teclado
+            document.getElementById("peso").blur();
+            document.getElementById("agua").blur();
+
             let peso = parseFloat(document.getElementById("peso").value);
             let agua = parseFloat(document.getElementById("agua").value);
         
