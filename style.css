@@ -4,6 +4,7 @@ body {
     background-color: #1A3636;
     margin: 0;
     padding: 20px;
+    max-width: 400px;
 }
 form {
     display: flex;
