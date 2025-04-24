@@ -1,7 +1,7 @@
 function formatarTempo(segundos) {
     let horas = Math.floor(segundos / 3600);
     let minutos = Math.floor((segundos % 3600) / 60);
-    let segundosRestantes = segundos % 60;
+    let segundosRestantes = (segundos % 60).toFixed(0);
 
     let partes = [];
     if (horas > 0) partes.push(`${horas} horas`);
@@ -34,3 +34,16 @@ function calcular() {
 
     document.getElementById("resultados-div").style.display = "block";
 }
+
+document.addEventListener("DOMContentLoaded", function() {
+    let pesoInput = document.getElementById("peso");
+    let aguaInput = document.getElementById("agua");
+    let resultadosDiv = document.getElementById("resultados-div");
+
+    let esconderResultados = function() {
+        resultadosDiv.style.display = "none";
+    }
+
+    pesoInput.addEventListener("input", esconderResultados);
+    aguaInput.addEventListener("input", esconderResultados);
+});
