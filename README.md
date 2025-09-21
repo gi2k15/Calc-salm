@@ -1,4 +1,4 @@
-# Calculadora de Salmoura (Calc-SALM)
+# Calculadora de Salmoura
 
 Uma aplicação web simples e moderna desenvolvida com Vue.js para calcular o tempo e a quantidade de sal para fazer salmoura de alimentos.
 
