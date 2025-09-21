@@ -41,6 +41,7 @@ function formatarTempo(segundos) {
         <p>Quantidade de sal: {{ sal }} gramas</p>
       </div>
     </div>
+    <p style="text-align: center;"><a href="https://github.com/gi2k15/Calc-salm" target="_blank" noreferrer noopener>GitHub</a></p>
   </div>
 </template>
 
@@ -64,6 +65,12 @@ form {
   display: flex;
   flex-direction: column;
   gap: 0.5em;
+}
+
+a {
+  color: white;
+  text-align: center;
+  font-size: 0.9em;
 }
 
 .container {
