@@ -31,9 +31,9 @@ function formatarTempo(segundos) {
     <p>Esta calculadora ajuda a determinar a quantidade de sal necessária para preparar uma salmoura 10%.</p>
     <div class="entradas">
       <form>
-        <label for="peso">Peso do alimento</label>
+        <label for="peso">Peso do alimento (g)</label>
         <input type="number" id="peso" v-model="peso">
-        <label for="agua">Quantidade de água</label>
+        <label for="agua">Quantidade de água (mL)</label>
         <input type="number" id="agua" v-model="agua">
       </form>
       <div class="resultado" v-if="peso && agua">
