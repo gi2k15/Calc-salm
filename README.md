@@ -1,29 +1,64 @@
-# calc-salm
+# Calculadora de Salmoura (Calc-SALM)
 
-This template should help get you started developing with Vue 3 in Vite.
+Uma aplicação web simples e moderna desenvolvida com Vue.js para calcular o tempo e a quantidade de sal para fazer salmoura de alimentos.
 
-## Recommended IDE Setup
+A calculadora determina:
+- A quantidade de sal necessária para uma salmoura a 10% com base no volume de água.
+- O tempo de cura na salmoura, estimado em 7 minutos para cada 100 gramas de alimento.
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+## 🚀 Tecnologias Utilizadas
 
-## Customize configuration
+- [Vue.js 3](https://vuejs.org/) - Framework JavaScript progressivo
+- [Vite](https://vitejs.dev/) - Build tool e servidor de desenvolvimento
+- Node.js (versão ^20.19.0 ou >=22.12.0)
 
-See [Vite Configuration Reference](https://vite.dev/config/).
+## 💻 Pré-requisitos
 
-## Project Setup
+Antes de começar, verifique se você tem os seguintes requisitos:
 
-```sh
+- Node.js (versão ^20.19.0 ou >=22.12.0)
+- pnpm (ou outro gerenciador de pacotes como npm ou yarn)
+
+## 🔧 Instalação
+
+1. Clone o repositório:
+```bash
+git clone https://github.com/seu-usuario/calc-salm.git
+cd calc-salm
+```
+
+2. Instale as dependências:
+```bash
 pnpm install
 ```
 
-### Compile and Hot-Reload for Development
+## 🎮 Usando a Calculadora
 
-```sh
+Para iniciar o servidor de desenvolvimento e usar a aplicação:
+
+```bash
 pnpm dev
 ```
 
-### Compile and Minify for Production
+A aplicação estará disponível em `http://localhost:5173` (ou outra porta indicada no terminal).
 
-```sh
+### Comandos Adicionais
+
+Para criar uma build de produção:
+
+```bash
 pnpm build
 ```
+
+Para visualizar a build de produção localmente:
+
+```bash
+pnpm preview
+```
+
+## 📝 Licença
+
+Este projeto está em desenvolvimento.
+
+---
+Desenvolvido com ❤️
