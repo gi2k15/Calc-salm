@@ -58,7 +58,7 @@ pnpm preview
 
 ## 📝 Licença
 
-Este projeto está em desenvolvimento.
+MIT
 
 ---
 Desenvolvido com ❤️
