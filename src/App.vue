@@ -68,7 +68,7 @@ form {
 
 .container {
   margin: 0 auto;
-  width: 700px;
+  width: 500px;
   max-width: 90vw;
 }
 
