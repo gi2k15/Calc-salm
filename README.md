@@ -3,8 +3,8 @@
 Uma aplicação web simples e moderna desenvolvida com Vue.js para calcular o tempo e a quantidade de sal para fazer salmoura de alimentos.
 
 A calculadora determina:
-- A quantidade de sal necessária para uma salmoura a 10% com base no volume de água.
-- O tempo de cura na salmoura, estimado em 7 minutos para cada 100 gramas de alimento.
+- A quantidade de sal necessária para uma salmoura com base no volume de água.
+- O tempo de cura na salmoura, estimado de acordo com o tipo e peso da proteína.
 
 ## 🚀 Tecnologias Utilizadas
 
@@ -32,7 +32,7 @@ cd calc-salm
 pnpm install
 ```
 
-## 🎮 Usando a Calculadora
+## 🧮 Usando a Calculadora
 
 Para iniciar o servidor de desenvolvimento e usar a aplicação:
 
