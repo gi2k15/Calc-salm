@@ -50,16 +50,16 @@ function formatarTempo(segundos) {
             {{ t.text }}
           </option>
         </select>
-  <label for="salmoura">Concentração da salmoura</label>
-  <select id="salmoura" v-model="salmoura">
+        <label for="salmoura">Concentração da salmoura</label>
+        <select id="salmoura" v-model="salmoura">
           <option v-for="s in salmouraObj" :value="s.value">
             {{ s.text }}
           </option>
         </select>
-        <label for="peso">Peso do alimento (g)</label>
-        <input type="number" id="peso" v-model="peso">
         <label for="agua">Quantidade de água (mL)</label>
         <input type="number" id="agua" v-model="agua">
+        <label for="peso">Peso do alimento (g)</label>
+        <input type="number" id="peso" v-model="peso">
       </form>
       <div class="resultado" v-if="peso && agua">
         <p>Tempo de salmoura: {{ tempo }}</p>
@@ -82,7 +82,8 @@ h1 {
   text-align: center;
 }
 
-input, select {
+input,
+select {
   padding: 5px;
   box-sizing: border-box;
 }
