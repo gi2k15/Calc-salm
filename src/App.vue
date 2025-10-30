@@ -12,8 +12,11 @@ const tempo = computed(() => {
 const sal = computed(() => {
   return agua.value * salmoura.value;
 });
+
 const tipoObj = [
-  { text: 'Frango', value: 7 }
+  { text: 'Frango', value: 7 },
+  { text: 'Porco', value: 20 },
+  { text: 'Peixe', value: 2 }
 ];
 const salmouraObj = [
   { text: '10%', value: 0.1 },
@@ -23,12 +26,13 @@ const salmouraObj = [
 function formatarTempo(segundos) {
   const horas = Math.floor(segundos / 3600);
   const minutos = Math.floor((segundos % 3600) / 60);
+
   const segundosRestantes = (segundos % 60).toFixed(0);
 
   const partes = [];
-  if (horas > 0) partes.push(`${horas} horas`);
-  if (minutos > 0) partes.push(`${minutos} minutos`);
-  if (segundosRestantes > 0) partes.push(`${segundosRestantes} segundos`);
+  if (horas > 0) partes.push(`${horas} ${horas === 1 ? 'hora' : 'horas'}`);
+  if (minutos > 0) partes.push(`${minutos} ${minutos === 1 ? 'minuto' : 'minutos'}`);
+  if (segundosRestantes > 0) partes.push(`${segundosRestantes} ${segundosRestantes == 1 ? 'segundo' : 'segundos'}`);
 
   return partes.join(", ").replace(/,([^,]*)$/, " e$1");
 }
