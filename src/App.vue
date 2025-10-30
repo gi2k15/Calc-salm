@@ -9,8 +9,9 @@ const salmoura = defineModel('salmoura', { default: 0.1 });
 const tempo = computed(() => {
   return formatarTempo(((peso.value * tipo.value) / 100) * 60);
 });
+
 const sal = computed(() => {
-  return agua.value * salmoura.value;
+  return (agua.value * salmoura.value).toFixed(2);
 });
 
 const tipoObj = [
@@ -18,14 +19,15 @@ const tipoObj = [
   { text: 'Porco', value: 20 },
   { text: 'Peixe', value: 2 }
 ];
+
 const salmouraObj = [
   { text: '10%', value: 0.1 },
   { text: '5%', value: 0.05 }
 ]
 
 function formatarTempo(segundos) {
-  const horas = Math.floor(segundos / 3600);
-  const minutos = Math.floor((segundos % 3600) / 60);
+  const horas = (Math.floor(segundos / 3600)).toFixed(0);
+  const minutos = (Math.floor((segundos % 3600) / 60)).toFixed(0);
 
   const segundosRestantes = (segundos % 60).toFixed(0);
 
@@ -86,6 +88,7 @@ input,
 select {
   padding: 5px;
   box-sizing: border-box;
+  margin-bottom: 15px;
 }
 
 form {
